@@ -56,4 +56,9 @@ class PhotosController < ApplicationController
 
    redirect_to("/photos/#{@the_photo.id}")
   end
+
+  def comment
+    
+    redirect_to("/photos/")
+  end
 end
