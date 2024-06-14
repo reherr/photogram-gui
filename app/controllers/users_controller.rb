@@ -17,4 +17,14 @@ class UsersController < ApplicationController
 
     render({ :template => "/user_templates/show"})
   end
+
+  def add
+    url_username = params.fetch("path_username")
+
+    matching_usernames = User.where({ :username => url_username})
+
+    @the_user = matching_usernames.first
+    
+    render({ :template => "/user_templates/show"})
+  end
 end
