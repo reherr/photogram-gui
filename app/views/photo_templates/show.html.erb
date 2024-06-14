@@ -4,7 +4,7 @@
     Image
   </dt>
   <dd>
-    <img src="<%= @a_photo.image %>">
+    <img src="<%= @the_photo.image %>">
   </dd>
 
   <dt>
@@ -12,7 +12,7 @@
   </dt>
   <dd>
     <p>
-      <%= @a_photo.caption %>
+      <%= @the_photo.caption %>
     </p>
   </dd>
 
@@ -20,14 +20,14 @@
     Owner
   </dt>
   <dd>
-    <%= @a_photo.poster.username %>
+    <%= @the_photo.poster.username %>
   </dd>
 
   <dt>
     Posted
   </dt>
   <dd>
-    <%= @a_photo.created_at %>
+    <%= @the_photo.created_at %>
   </dd>
 
   <dt>
@@ -49,7 +49,7 @@
     Delete photo
   </dt>
   <dd>
-    <a href="/delete_photo/<%= @a_photo.id %>">
+    <a href="/delete_photo/<%= @the_photo.id %>">
       Delete this photo
     </a>
   </dd>
