@@ -58,7 +58,15 @@ class PhotosController < ApplicationController
   end
 
   def comment
+    the_id = params.fetch("path_id")
+    matching_comments = Comment.where({ :id => the_id })
+    @a_comment = matching_comments.at(0)
+
+    input_author_id = params.fetch("query_author_id")
+    input_comment = params.fetch("query_comment")
     
-    redirect_to("/photos/")
+    @a_comment.save
+
+    redirect_to("/photos/#{@the_photo.id}")
   end
 end

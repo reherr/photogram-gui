@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get("/delete_photo/:toast_id", { :controller => "photos", :action => "delete"})
   post("/insert_photo", { :controller => "photos", :action => "create"})
   post("/update_photo/:modify_id", { :controller => "photos", :action => "update"})
+  
   post("/add_comment/:path_id", { :controller => "photos", :action => "comment"})
 end
