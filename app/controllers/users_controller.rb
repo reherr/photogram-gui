@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
     @the_user.save
 
-    redirect_to("/users/#{@the_user.id}")
+    redirect_to("/users/#{@the_user.username}")
   end
 
   def update
